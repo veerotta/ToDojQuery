@@ -2,14 +2,11 @@ try{
     
 /* poista itemi listalta */
 
-var close = $(".delbtn");
-var i;
-
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    (this).closest('li').toggleClass('strike').fadeOut('slow', function() { $(this).remove(); });
-  }
-}
+$(document).ready(function () {
+  $('.delbtn').click(function (event) { 
+    $(this).closest('li').toggleClass('strike').fadeOut('slow', function() { $(this).remove(); });
+});
+});
     
 
 // uuden taskin luonti, add-nappia painaessa
